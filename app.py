@@ -1,5 +1,5 @@
 """
-WeCare — AI Stress Support for International Students
+TongXin — AI Stress Support for International Students
 Streamlit demo app: multi-step check-in → phenotype classification → recommendations
 
 Run locally : streamlit run app.py
@@ -11,7 +11,7 @@ import re
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="UniCare",
+    page_title="同心 · TongXin",
     page_icon="💚",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -46,7 +46,9 @@ body, .stApp { font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans
 /* Welcome hero */
 .hero { text-align: center; padding: 2rem 0 1rem; }
 .hero-icon { font-size: 4rem; margin-bottom: .5rem; }
-.hero-title { font-size: 2rem; font-weight: 700; color: #07C160; margin: 0; }
+.hero-title { font-size: 2rem; font-weight: 700; color: #07C160; margin: 0; line-height: 1.1; }
+.hero-roman { font-size: 1.7rem; font-weight: 700; color: #07C160;
+              letter-spacing: .12em; margin: .2rem 0 0; }
 .hero-sub   { color: #666; font-size: .95rem; margin-top: .4rem; line-height: 1.5; }
 
 /* Section labels */
@@ -339,7 +341,8 @@ def render_welcome():
     st.markdown("""
     <div class="hero">
       <div class="hero-icon">💚</div>
-      <p class="hero-title">UniCare</p>
+      <p class="hero-title">同心</p>
+      <p class="hero-roman">TongXin</p>
       <p class="hero-sub">
         AI-powered stress support for<br>international students at Tongji University
       </p>
@@ -600,7 +603,7 @@ def render_results():
 
     st.markdown("""
     <p style="text-align:center; font-size:.75rem; color:#bbb; margin-top:1.5rem;">
-      UniCare is a screening tool, not a clinical assessment.<br>
+      同心 TongXin is a screening tool, not a clinical assessment.<br>
       Your data is anonymous and never shared.
     </p>
     """, unsafe_allow_html=True)
